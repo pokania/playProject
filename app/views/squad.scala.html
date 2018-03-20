@@ -1,7 +1,11 @@
 @* hello Template File *@
 
-@(title: String)(content: String)
+@(title: String, players: Array[String])
 
 @main(title){
-	<h1>content</h1>	
+	<ul>
+		@for(player <- players){
+			<li>@player</li>		
+		}
+	</ul>	
 }

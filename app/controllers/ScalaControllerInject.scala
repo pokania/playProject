@@ -20,9 +20,7 @@ class ScalaControllerInject @Inject()(db: Database, val controllerComponents: Co
       conn.close()
     }
     
-    Ok(views.html.squad("Squad"){
-      "Hello"
-      })
+    Ok(views.html.squad("Squad", squadList.toArray))
   }
 
 }
