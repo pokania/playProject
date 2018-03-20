@@ -22,8 +22,5 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
   
-  def squad() = Action { implicit req => 
-    Ok(views.html.squad())
-  }
-    
+ 
 }
