@@ -1,11 +1,12 @@
 @* hello Template File *@
 
-@(title: String, players: Array[String])
+@(title: String, players: Array[Player])
 
 @main(title){
-	<ul>
+	<h3>@title</h3>
+	<ol>
 		@for(player <- players){
-			<li>@player</li>		
+			<li>@player.firstName @player.lastName - @player.age - @player.position</li>		
 		}
-	</ul>
+	</ol>
 }
